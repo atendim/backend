@@ -28,3 +28,22 @@ Install the dependencies and devDependencies and start the server.
 		```javascript
 		JWT_SECRET=your_key
     	```
+## Contribute
+Let's make this app better togheter!
+
+If you have any suggestions/ideas please feel free to write about it. You are also welcome to fork this project and send pull request with your changes.
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+    
+   [ReactJs]: <https://reactjs.org/>
+   [axios]: <https://axios-http.com/docs/intro>
+   [Radix UI]: <https://www.radix-ui.com/>
+   [Stiches]: <https://stitches.dev/>
+   [Prisma]: <https://www.prisma.io/>
+   [node.js]: <http://nodejs.org>
+   [Typescript]: <https://www.typescriptlang.org/>
+   [express]: <http://expressjs.com>
+   [React JS]: <https://reactjs.org/>
+   [FormatJS]: <https://formatjs.io/>
+   [Vite]: <https://vitejs.dev/>
+   [SQLite]: <https://www.sqlite.org/index.html>
