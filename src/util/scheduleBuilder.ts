@@ -1,10 +1,14 @@
 import { ScheduleFeed, ScheduleRes, ScheduleWeek } from "../models/responses";
 
 export const buildSheduleFeed = (data: ScheduleRes[]) => {
-  const feed: ScheduleFeed = new ScheduleFeed();
+  let feed: ScheduleFeed = new ScheduleFeed();
 
   if (data) {
     data.forEach(schedule => {
+      if (schedule.finished) {
+        feed.fineshed.schedules.push(schedule);
+        return;
+      }
       let list = isOverdue(schedule) ? 'overdue' : 'avaliable'
 
       let indexSameDay = feed[list].findIndex(s =>
@@ -26,10 +30,13 @@ export const buildSheduleFeed = (data: ScheduleRes[]) => {
 }
 
 const isSameDay = (date1: Date, date2: Date = new Date()) => {
-  date1.setHours(0, 0, 0, 0);
-  date2.setHours(0, 0, 0, 0);
+  let d1 = new Date(date1);
+  let d2 = new Date(date2);
 
-  return date1.getTime() === date2.getTime();
+  d1.setHours(0, 0, 0, 0);
+  d2.setHours(0, 0, 0, 0);
+
+  return d1.getTime() === d2.getTime();
 }
 
 const isOverdue = (schedule: ScheduleRes) => {
