@@ -28,7 +28,8 @@ class AuthUserController {
       return res.json(user)
 
     } catch (error) {
-      return res.status(error.status).json(new ErrorResponse(
+      console.log(error)
+      return res.status(error?.status || 500).json(new ErrorResponse(
         error.message,
         error.status
       ))
