@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/atendim/backend",
   "license": "MIT",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dev": "ts-node-dev --exit-child src/app.ts"
   },
