@@ -5,6 +5,11 @@ import { ensureAuth } from "./middlewares/ensureAuth";
 const router = Router();
 
 /**
+ * Hello World 
+ */
+router.get("/", (req, res) => res.json("Welcome to Atendim!") );
+
+/**
  * User Auth Routes
  */
 router.post("/register", AuthUserController.register);
